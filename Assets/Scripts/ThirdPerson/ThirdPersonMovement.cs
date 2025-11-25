@@ -8,7 +8,12 @@ public class ThirdPersonMovement : MonoBehaviour
     public float speed = 6f;
 
     public float turnSmoothTime = 0.1f;
-    
+
+    private float _gravity = -9.81f;
+    [SerializeField] private float gravityMultiplier = 3.0f;
+    private float _velocity;
+
+
     float turnSmoothVelocity;
 
     // Update is called once per frame
@@ -28,4 +33,7 @@ public class ThirdPersonMovement : MonoBehaviour
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
     }
+
+
+  
 }
