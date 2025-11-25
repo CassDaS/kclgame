@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 86b18af2ebdcc154aaab2f3908f46e3b
   - enabled: 1
-    path: Assets/Scenes/kclgame.unity
+    path: Assets/Scenes/kclgame2.unity
     guid: 31a6e6a9342b64daeb484268209826d6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
