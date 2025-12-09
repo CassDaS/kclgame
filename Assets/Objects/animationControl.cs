@@ -22,10 +22,10 @@ public class animationControl : MonoBehaviour
         // The overall speed
         float overallSpeed = controller.velocity.magnitude;
         
-        if(overallSpeed > 0f){;
+        if(overallSpeed > 01f){;
             animator.SetBool("iswalk", true);
         }
-        else if(overallSpeed == 0f)
+        else if(overallSpeed == 01f)
         {
             animator.SetBool("iswalk", false);
         }
