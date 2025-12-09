@@ -3,6 +3,7 @@ public class animationControl : MonoBehaviour
 {
     private Animator animator;
     private CharacterController controller;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -12,20 +13,14 @@ public class animationControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         Vector3 horizontalVelocity = controller.velocity;
-        horizontalVelocity = new Vector3(controller.velocity.x, 0, controller.velocity.z);
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        // The speed on the x-z plane ignoring any speed
-        float horizontalSpeed = horizontalVelocity.magnitude;
-        // The speed from gravity or jumping
-        float verticalSpeed  = controller.velocity.y;
-        // The overall speed
-        float overallSpeed = controller.velocity.magnitude;
-        
-        if(overallSpeed > 01f){;
+        if (direction.magnitude >= 0.1f)
+        {
             animator.SetBool("iswalk", true);
-        }
-        else if(overallSpeed == 01f)
+        } else if (direction.magnitude <= 0.1f)
         {
             animator.SetBool("iswalk", false);
         }
