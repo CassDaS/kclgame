@@ -12,6 +12,7 @@ public class PickUpObject : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && canPick == true)
         {
             this.transform.parent = target.transform;
+            this.transform.position = target.transform.position;
             this.transform.localEulerAngles = new Vector3(0, 0, 0);
             this.GetComponent<Rigidbody>().isKinematic = true;
         }
