@@ -11115,6 +11115,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: e083d64e6f250c549b02cda200eda33f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: e083d64e6f250c549b02cda200eda33f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e083d64e6f250c549b02cda200eda33f, type: 3}
       propertyPath: m_Name
       value: APPLE!

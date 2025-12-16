@@ -6,10 +6,10 @@ public class PickUpObject : MonoBehaviour
 {
     bool canPick;
     [SerializeField] GameObject target;
-    
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canPick == true)
+        if (Input.GetKeyDown(KeyCode.E) && canPick)
         {
             this.transform.parent = target.transform;
             this.transform.position = target.transform.position;
@@ -22,8 +22,8 @@ public class PickUpObject : MonoBehaviour
             this.transform.parent = null;
             this.GetComponent<Rigidbody>().isKinematic = false;
         }
-    }    
-   
+    }
+
     void OnTriggerEnter(Collider other)
     {
         canPick = true;
